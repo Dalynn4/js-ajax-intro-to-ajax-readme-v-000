@@ -7,10 +7,10 @@ function getRepositories() {
 
 function showRepositories(event, data) {
   var repos = JSON.parse(this.responseText)
-  
+  console.log(repos)
   let repoList = "<ul>"
-  for(var i=0; i < this.responseText.length; i++) {
-    repoList += "<li>" + this.responseText[i]["name"] + "<li>"
+  for(var i=0; i < repos.length; i++) {
+    repoList += "<li>" + repos[i]["name"] + "<li>"
     }
     repoList += "</ul>"
     
